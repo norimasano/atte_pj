@@ -18,3 +18,5 @@ return view('welcome');
 });
 
 Route::get('/register', [AccountController::class, 'index']);
+Route::post('/register', [AccountController::class, 'register']);
+Route::post('/register', [AccountController::class, 'create']);

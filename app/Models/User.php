@@ -17,10 +17,12 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    // 可変項目
     protected $fillable = [
         'name',
         'email',
         'password',
+        
     ];
 
     /**

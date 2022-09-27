@@ -9,16 +9,13 @@
 </head>
 
 <body>
-  <form action="/register" method="post">
+  <form action="/login" method="post">
     @csrf
-    <label>氏名</label><br>
-    <input type="text" name="name"><br>
+
     <label>メールアドレス</label><br>
     <input type="email" name="email"><br>
     <label>パスワード</label><br>
     <input type="password" name="password"><br>
-    <label>確認用パスワード</label><br>
-    <input type="password" name="password"><br><br>
     <input type="submit" value="送信する">
   </form>
 
