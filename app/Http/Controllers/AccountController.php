@@ -24,12 +24,13 @@ public function register(Request $request)
 // データベースに保存する
 public function create(Request $request)
 {
-    ddd($request);
+    // ddd($request);
     $form = $request->all();
     User::create($form);
     return redirect('/register');
 }
 // ここまで
+
 }
 
 

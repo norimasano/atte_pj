@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\LoginController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,9 +17,17 @@ use App\Http\Controllers\AccountController;
 */
 
 Route::get('/', function () {
-return view('welcome');
+    return view('welcome');
 });
 
-Route::get('/register', [AccountController::class, 'index']);
-Route::post('/register', [AccountController::class, 'register']);
-Route::post('/register', [AccountController::class, 'create']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+// Route::get('/register', [AccountController::class, 'index']);
+// Route::post('/register', [AccountController::class, 'register']);
+// Route::post('/register', [AccountController::class, 'create']);
+// Route::get('/login', [LoginController::class, 'index']);
+

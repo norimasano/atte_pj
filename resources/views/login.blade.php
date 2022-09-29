@@ -15,7 +15,7 @@
     <label>メールアドレス</label><br>
     <input type="email" name="email"><br>
     <label>パスワード</label><br>
-    <input type="password" name="password"><br>
+    <input type="password" name="password"><br><br>
     <input type="submit" value="送信する">
   </form>
 
