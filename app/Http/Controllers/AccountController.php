@@ -10,17 +10,11 @@ use App\Http\Requests\UserRequest;
 class AccountController extends Controller
 {
 public function index()
-    {
-        return view ('register');
-    }
-
-public function register(Request $request)
 {
-    // dump($request);
-    // dd($request);
-    // ddd($request);
-
+    return view ('register');
 }
+
+
 // データベースに保存する
 public function create(Request $request)
 {
@@ -28,6 +22,7 @@ public function create(Request $request)
     $form = $request->all();
     User::create($form);
     return redirect('/register');
+    // サンクスページに飛ばせるとグッド
 }
 // ここまで
 

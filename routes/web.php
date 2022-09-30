@@ -5,6 +5,8 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\LoginController;
 
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,14 +22,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
-// Route::get('/register', [AccountController::class, 'index']);
+Route::get('/register', [AccountController::class, 'index']);
 // Route::post('/register', [AccountController::class, 'register']);
-// Route::post('/register', [AccountController::class, 'create']);
-// Route::get('/login', [LoginController::class, 'index']);
-
+Route::post('/register', [AccountController::class, 'create']);
+Route::get('/login', [LoginController::class, 'index']);
+// Route::get('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class,'checkUser']);
