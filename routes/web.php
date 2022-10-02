@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\LoginController;
-
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -32,5 +32,6 @@ Route::get('/register', [AccountController::class, 'index']);
 // Route::post('/register', [AccountController::class, 'register']);
 Route::post('/register', [AccountController::class, 'create']);
 Route::get('/login', [LoginController::class, 'index']);
-// Route::get('/login', [LoginController::class, 'login']);
+Route::post('/login', [LoginController::class, 'login']);
+Route::get('/login', [LoginController::class, 'check']);
 Route::post('/login', [LoginController::class,'checkUser']);
