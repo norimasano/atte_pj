@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\LoginController;
-use Illuminate\Support\Facades\Auth;
+// use Illuminate\Support\Facades\Auth;
 
 
 
@@ -18,9 +18,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// // Route::get('/', function () {
+// return view('welcome');
+// });
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -33,5 +33,5 @@ Route::get('/register', [AccountController::class, 'index']);
 Route::post('/register', [AccountController::class, 'create']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login']);
-Route::get('/login', [LoginController::class, 'check']);
-Route::post('/login', [LoginController::class,'checkUser']);
+// Route::get('/login', [LoginController::class, 'check']);
+// Route::post('/login', [LoginController::class,'checkUser']);

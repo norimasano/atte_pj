@@ -13,7 +13,8 @@ class CreateWorksTable extends Migration
      */
     public function up()
     {
-        Schema::create('works', function (Blueprint $table) {
+        Schema::create('works', function (Blueprint $table) 
+        {
             $table->id();
             $table->integer('user_id');
             $table->date('work_date');

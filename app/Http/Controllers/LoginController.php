@@ -9,27 +9,29 @@ class LoginController extends Controller
 {
     public function index()
     {
-    return view ('login');
+        return view ('login');
     }
 
-    public function check(Request $request)
+    public function login(Request $request)
     {
         // ddd($request);
-    $text = ['text' => 'ログインして下さい。'];
-    return view('auth', $text);
-    }
+    //     $text = ['text' => 'ログインして下さい。'];
+    // }
 
-    public function checkUser(Request $request)
+    // public function checkUser(Request $request)
+    // {
+        $email = $request->email;
+        $password = $request->password;
+    
+    if (Auth::attempt(['email' => $email,'password' => $password]))
     {
-    $email = $request->email;
-    $password = $request->password;
-    if (Auth::attempt(['email' => $email,
-    'password' => $password])) {
-    $text =   Auth::user()->name . 'さんがログインしました';
+        $text =   Auth::user()->name . 'さんがログインしました';
+        return redirect ('index');
+    
     } else {
-    $text = 'ログインに失敗しました';
+        $text = 'ログインに失敗しました';
     }
-    return view('auth', ['text' => $text]);
+        return view ('login');
     }
 
 
