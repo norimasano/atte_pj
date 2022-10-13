@@ -13,7 +13,8 @@ class CreateBreakingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('breakings', function (Blueprint $table) {
+        Schema::create('breakings', function (Blueprint $table) 
+        {
             $table->id();
             $table->integer('work_id');
             $table->time('start_time');

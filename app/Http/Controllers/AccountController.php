@@ -16,7 +16,7 @@ class AccountController extends Controller
     }
 
 
-    // データベースに保存する
+    // データベースに新規会員情報を保存する
     public function create(Request $request)
     {
         $form = $request->all();

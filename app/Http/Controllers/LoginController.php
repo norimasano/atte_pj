@@ -12,6 +12,7 @@ class LoginController extends Controller
         return view ('login');
     }
 
+    // メールアドレスとパスワードでusersテーブルを照合
     public function login(Request $request)
     {
         // ddd($request);

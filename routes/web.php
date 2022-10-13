@@ -20,9 +20,9 @@ use App\Http\Controllers\BreakingController;
 |
 */
 
-Route::get('/', function () {
-return view('index');
-});
+// Route::get('/', function () {
+// return view('index');
+// });
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -37,7 +37,7 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::post('/login', [LoginController::class, 'login']);
 // Route::get('/login', [LoginController::class, 'check']);
 Route::post('/login', [LoginController::class,'checkUser']);
-// Route::get('/', [WorkController::class, 'index']);
+Route::get('/', [WorkController::class, 'index']);
 Route::get('/work/start', [WorkController::class, 'start']);
 Route::get('/work/end', [WorkController::class, 'end']);
 Route::get('/breaking/start', [BreakingController::class, 'start']);
