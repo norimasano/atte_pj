@@ -19,7 +19,7 @@ class CreateWorksTable extends Migration
             $table->integer('user_id');
             $table->date('work_date');
             $table->time('start_time');
-            $table->time('end_time');
+            $table->time('end_time')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });
