@@ -5,15 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-
-class Work extends Model
+class Breaking extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'user_id',
-        'work_date',
+        'work_id',
         'start_time', 
-        'end_time',   
-        // 勤務終了の際に使うのでend_time消さない
+        'end_time',
     ];
 }
+
+

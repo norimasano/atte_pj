@@ -46,6 +46,8 @@ class WorkController extends Controller
         // 更新かける前に更新するためのデータを特定する処理
         $user_id = Auth::id();
         $work_date =Carbon::today()->format('Y-m-d');
+        $start_time = Carbon::now()->format('H:i:s');
+        $end_time = Carbon::now()->format('H:i:s');
         $work = Work::where('user_id',$user_id)->where('work_date',$work_date)->update(['end_time' => $end_time]);
         
         if($work){

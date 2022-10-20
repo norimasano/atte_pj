@@ -18,7 +18,7 @@ class CreateBreakingsTable extends Migration
             $table->id();
             $table->integer('work_id');
             $table->time('start_time');
-            $table->time('end_time');
+            $table->time('end_time')->nullable();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });
