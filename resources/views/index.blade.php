@@ -11,6 +11,7 @@
 <body>
   <form action="/" method="post">
     @csrf
+    <a href="/attendance" class="xxx-btn">日付一覧</a><br><br>
     <a href="/work/start" class="xxx-btn">勤務開始</a>
     <a href="/work/end" class="xxx-btn">勤務終了</a>
     <a href="/breaking/start" class="xxx-btn">休憩開始</a>

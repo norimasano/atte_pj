@@ -49,13 +49,9 @@ class WorkController extends Controller
         $start_time = Carbon::now()->format('H:i:s');
         $end_time = Carbon::now()->format('H:i:s');
         $work = Work::where('user_id',$user_id)->where('work_date',$work_date)->update(['end_time' => $end_time]);
-        
-        if($work){
-            $start_time = $work->start_time;
-            $end_time = $work->end_time;
-        }else{
+
             return redirect('/');
-        }
+        
     }
 
 

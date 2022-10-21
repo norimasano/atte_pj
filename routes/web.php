@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 // use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\WorkController;
 use App\Http\Controllers\BreakingController;
+use App\Http\Controllers\AttendanceController;
 
 
 
@@ -42,3 +43,4 @@ Route::get('/work/start', [WorkController::class, 'start']);
 Route::get('/work/end', [WorkController::class, 'end']);
 Route::get('/breaking/start', [BreakingController::class, 'start']);
 Route::get('/breaking/end', [BreakingController::class, 'end']);
+Route::get('/attendance',[AttendanceController::class, 'index']);
